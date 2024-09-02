@@ -1,0 +1,9 @@
+.header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu a {
+  text-decoration: none;
+}
