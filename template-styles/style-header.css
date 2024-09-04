@@ -1,9 +1,61 @@
 .header {
   background-color: aqua;
+  padding: 2%;
+  margin: 1%;
+}
+
+.header-el {
+  background-color: rgb(159, 159, 242);
   display: flex;
   justify-content: space-between;
 }
 
+.logo {
+  background-color: rgb(242, 197, 138);
+}
+
+.menu {
+  background-color: rgb(197, 220, 98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu a {
   text-decoration: none;
+}
+
+.menu > a:hover {
+  animation-name: menu_text;
+  animation-duration: 0.5s;
+  animation-direction: normal;
+  animation-iteration-count: initial;
+  text-decoration: underline;
+}
+
+@keyframes menu_text {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(10%);
+  }
+}
+
+.text {
+  white-space: nowrap;
+}
+
+.contact {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+@media screen and (width <= 720px) {
+  .header-el {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
