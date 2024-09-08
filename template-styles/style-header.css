@@ -1,21 +1,42 @@
 .header {
-  background-color: aqua;
+  background-color: rgb(145, 227, 255);
   padding: 2%;
   margin: 1%;
+  border-radius: 2rem;
 }
 
 .header-el {
-  background-color: rgb(159, 159, 242);
+  /* background-color: rgb(159, 159, 242); */
   display: flex;
   justify-content: space-between;
+  margin: 1%;
 }
 
-.logo {
-  background-color: rgb(242, 197, 138);
+.logo p {
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    /* opacity: 0; */
+  }
+  50% {
+    transform: scale(1.01);
+    /* opacity: 0.9; */
+  }
+}
+
+.logo > p:hover {
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate-reverse;
 }
 
 .menu {
-  background-color: rgb(197, 220, 98);
+  /* background-color: rgb(197, 220, 98); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,14 +44,6 @@
 
 .menu a {
   text-decoration: none;
-}
-
-.menu > a:hover {
-  animation-name: menu_text;
-  animation-duration: 0.5s;
-  animation-direction: normal;
-  animation-iteration-count: initial;
-  text-decoration: underline;
 }
 
 @keyframes menu_text {
@@ -41,6 +54,14 @@
   10% {
     transform: translateX(10%);
   }
+}
+
+.menu > a:hover {
+  animation-name: menu_text;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: initial;
+  text-decoration: underline;
 }
 
 .text {
@@ -57,5 +78,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
   }
 }
